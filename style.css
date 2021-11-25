@@ -1,1 +1,39 @@
+body{
+    background-color: #1f1f1f;
+    margin: 0;
+}
 
+#menu{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 0.5rem;
+    height:2rem;
+    width:2.5rem;
+    top:1rem;
+    right: 1rem;
+    /* background-color: red; */
+    /* display: none; */
+}
+
+#hamburger > input{
+    display: none;
+}
+
+#hamburger > input, #hamburger > label{
+    position: absolute;
+    top:1rem;
+    right: 1rem;
+    z-index: 100;
+    padding: 2rem;
+    margin: 0;
+    cursor: pointer;
+}
+
+#menu > span{
+    background-color: whitesmoke;
+    height: 2px;
+    width: 100%;
+    z-index: 1000;
+}
