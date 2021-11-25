@@ -8,6 +8,8 @@ function main(){
 function addEventListeners(){
     const menuButton = document.getElementById("hamburger-checkbox");
     menuButton.onclick = hamburgerToggle;
+    let menuText = document.getElementById("list-text");
+    menuText.onclick = hamburgerToggle;
 }
 
 function hamburgerToggle(){
@@ -20,8 +22,9 @@ function hamburgerToggle(){
     if (menuList.style.width === "30rem"){
         fadedBackground.style.width = null;
         menuList.style.width = null;
-    } else {
+    }else {
         menuList.style.width = "30rem";
         fadedBackground.style.width="100%";
     }
+     
 }

@@ -1,5 +1,44 @@
+html{
+    scroll-behavior: smooth;
+}
+
 :root{
     --menu-list-width: 30rem;
+}
+
+#code-font{
+    font-family: 'Inconsolata', monospace;
+    font-size: 32px;
+    font-weight: 100;
+}
+
+header{
+    height: 5rem;
+}
+
+#startsida{
+    margin-top: 5rem;
+    height: 95vh;
+    width: 100%;
+    /* background-color: red; */
+}
+
+#om-mig{
+    height: 50vh;
+    /* background-color: blue; */
+    position: relative;
+    left: 15vh;
+    right: 15vh;
+    max-width: 40vh;
+}
+
+#utbildning{
+    height: 50vh;
+    /* background-color: blue; */
+    position: relative;
+    left: 15vh;
+    right: 15vh;
+    max-width: 40vh;
 }
 
 body{
@@ -8,6 +47,8 @@ body{
     font-family: sans-serif;
     color: whitesmoke;
 }
+
+
 
 #decoration-circle{
     height: 10rem;
@@ -135,7 +176,7 @@ body{
 
 #menu-opacity{
     position: absolute;
-    height: 100vh;
+    height: 100%;
     width: 0;
     z-index: 100;
     background-color: rgba(0, 0, 0, 50%);
@@ -146,6 +187,7 @@ body{
     position: absolute;
     top: 40vh;
     left: 15vh;
+    right: 15vh;
 }
 
 /* #line1{
