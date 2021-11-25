@@ -11,6 +11,9 @@ function addEventListeners(){
 }
 
 function hamburgerToggle(){
+    let line1 = document.getElementById("line1");
+    let line2 = document.getElementById("line2");
+    let line3 = document.getElementById("line3");
     const menuList = document.getElementById("menu-list");
     const fadedBackground = document.getElementById("menu-opacity");
 

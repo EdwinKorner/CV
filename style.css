@@ -17,6 +17,18 @@ body{
     position: absolute;
     top: 20%;
     left: 60%;
+    box-shadow: 2px 5px 20px #FA2FBD;
+}
+
+#decoration-circle2{
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    border: 2px solid #ED0800;
+    position: absolute;
+    top: 55%;
+    left: 40%;
+    box-shadow: 2px 5px 20px #ED0800;
 }
 
 #decoration-square{
@@ -24,32 +36,23 @@ body{
     width: 7rem;
     border: 2px solid #FFF67D;
     position: absolute;
-    top: 55%;
+    top: 60%;
     left: 10%;
     transform: rotate(25deg);
+    box-shadow: 2px 5px 20px #FFF67D;
 }
 
-#decoration-triangle{
-    width: 0; 
-    height: 0; 
-    border-left: 5rem solid transparent;
-    border-right: 5rem solid transparent; 
-    border-bottom: 5rem solid #FFF67D;
+#decoration-square2{
+    height: 7rem;
+    width: 7rem;
+    border: 2px solid #00C8F0;
     position: absolute;
-    top: 30%;
+    top: 25%;
     left: 30%;
-    transform: rotate(-25deg);
+    transform: rotate(-35deg);
+    box-shadow: 2px 5px 20px #00C8F0;
 }
 
-#decoration-triangle:after{
-    content: '';
-    border-style:solid;
-    border-width: 0 4.6rem 4.6rem;
-    border-color: transparent transparent #141414;
-    position: absolute;
-    top: 3px;
-    left: -73px;
-}
 
 #menu{
     display: flex;
@@ -63,6 +66,7 @@ body{
     right: 1rem;
     /* background-color: red; */
     /* display: none; */
+    transition: all .5s ease-in-out;
 }
 
 #hamburger{
@@ -104,6 +108,7 @@ body{
     height: 2px;
     width: 100%;
     z-index: 1000;
+    transition: all .5s ease-in-out;
 }
 
 #menu-list > ul{
@@ -116,6 +121,16 @@ body{
     color: whitesmoke;
     font-size: 4rem;
     line-height: 10rem;
+    padding: 3rem;
+}
+
+#border-bottom{
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid white;
+    position: absolute;
+    left: 10%;
+    right: 10%;
 }
 
 #menu-opacity{
@@ -133,3 +148,15 @@ body{
     left: 15vh;
 }
 
+/* #line1{
+    transform: translateX(-50px);
+    background: transparent;
+}
+
+#line2{
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+#line3{
+    transform: rotate(-45deg) translate(10px, 10px);
+} */
