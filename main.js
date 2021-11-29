@@ -28,3 +28,16 @@ function hamburgerToggle(){
     }
      
 }
+
+const observer = new IntersectionObserver (entries => {
+
+});
+
+observer.observe(document.querySelector('#om-mig'));
+
+entries.forEach( entry => {
+    const div = entry.target.querySelector
+    if(entry.isIntersecting) {
+        entry.target.classList.add('enter-sight');
+    }
+});

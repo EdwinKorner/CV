@@ -2,6 +2,12 @@ html{
     scroll-behavior: smooth;
 }
 
+@keyframes enter-sight{
+    from{opacity: 0; transform: scale(0, .025); }
+
+    to{opacity: 100%; transform: scale(1, .025); }
+}
+
 :root{
     --menu-list-width: 30rem;
 }
@@ -18,18 +24,23 @@ header{
 
 #startsida{
     margin-top: 5rem;
-    height: 95vh;
+    height: 85vh;
     width: 100%;
     /* background-color: red; */
+    transition: all .5s ease-in-out;
 }
 
 #om-mig, #utbildning, #portfolio, #erfarenhet, #kontakta-mig{
-    height: 50vh;
+    height: 70vh;
     /* background-color: blue; */
     position: relative;
     left: 15vh;
     right: 15vh;
-    max-width: 40vh;
+    max-width: 100rem;
+    /* border: 2px solid red; */
+    margin-bottom: 5rem;
+    animation-name: enter-sight;
+    animation-duration: 1s;
 }
 
 body{
@@ -46,10 +57,23 @@ body{
     width: 10rem;
     border-radius: 50%;
     border: 2px solid #FA2FBD;
-    position: absolute;
-    top: 20%;
-    left: 60%;
+    position: relative;
+    margin-top: 0;
+    margin-left: 70%;
     box-shadow: 2px 5px 20px #FA2FBD;
+}
+
+#decoration-circle::before{
+    content: '';
+    position: absolute;
+    background: #FA2FBD;
+    top: 90%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    transform: perspective(5rem) rotateX(40deg) scale(1, 0.75);
+    filter: blur(1.5rem);
 }
 
 #decoration-circle2{
@@ -57,34 +81,72 @@ body{
     width: 10rem;
     border-radius: 50%;
     border: 2px solid #ED0800;
-    position: absolute;
-    top: 55%;
-    left: 40%;
+    position: relative;
+    margin-top: 0;
+    margin-left: 70%;
     box-shadow: 2px 5px 20px #ED0800;
+}
+
+#decoration-circle2::before{
+    content: '';
+    position: absolute;
+    background: #ED0800;
+    top: 90%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    transform: perspective(5rem) rotateX(40deg) scale(1, 0.75);
+    filter: blur(1.5rem);
 }
 
 #decoration-square{
     height: 7rem;
     width: 7rem;
     border: 2px solid #FFF67D;
-    position: absolute;
-    top: 60%;
-    left: 10%;
+    position: relative;
+    margin-top: 5%;
+    margin-left: 70%;
     transform: rotate(25deg);
     box-shadow: 2px 5px 20px #FFF67D;
+}
+
+#decoration-square::before{
+    content: '';
+    position: absolute;
+    background: #FFF67D;
+    top: 80%;
+    left: 10%;
+    width: 100%;
+    height: 100%;
+
+    transform: perspective(5rem) rotateX(65deg) rotateY(-20deg) scale(1, 0.70);
+    filter: blur(1.5rem);
 }
 
 #decoration-square2{
     height: 7rem;
     width: 7rem;
     border: 2px solid #00C8F0;
-    position: absolute;
-    top: 25%;
-    left: 30%;
+    position: relative;
+    margin-top: 5%;
+    margin-left: 70%;
     transform: rotate(-35deg);
     box-shadow: 2px 5px 20px #00C8F0;
 }
 
+#decoration-square2::before{
+    content: '';
+    position: absolute;
+    background: #00C8F0;
+    top: 60%;
+    left: -60%;
+    width: 100%;
+    height: 100%;
+
+    transform: perspective(5rem) rotateX(65deg) rotateY(35deg) scale(1, 0.75);
+    filter: blur(1.5rem);
+}
 
 #menu{
     display: flex;
