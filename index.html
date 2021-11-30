@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script src="main.js"></script>
+    <script defer src="main.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=M+PLUS+1+Code:wght@200&family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -53,58 +53,88 @@
 </div>
 
     <div id="om-mig">
-        <div id="decoration-circle"></div>
-        <h1 id="code-font" style="color: #FA2FBD"> &lt;Om mig&gt;</h1>
-        <p style="font-size: larger;">Lorem, ipsum dolor sit amet consectetur <br>
-             adipisicing elit. Quae facilis provident blanditiis iste aperiam <br>
-              officia iure fugiat ex, accusantium exercitationem <br> 
-              magni sint, quis laboriosam dolor voluptatem? <br>
-               Mollitia reprehenderit esse iusto?</p>
-        <p id="code-font" style="color: #FA2FBD;"> &lt;/Om mig&gt;</p>
+        <div id="decoration-circle" class="slide-in from-right"></div>
+        <h1 id="code-font" style="color: #FA2FBD" class="slide-in from-left"> &lt;Om mig&gt;</h1>
+        <p style="font-size: larger;" class="slide-in from-left">Jag heter Edwin Körner och är 19 år gammal. <br>
+        Jag har ett intresse för det mesta som är kreativt vilket är en stor anledning varför jag valde att utbilda mig till frontenddeveloper. <br>
+        Jag levde mina första 4 år i Göteborg men flyttade till Ljungskile och växte upp där, nu har jag flyttat tillbaka till en liten etta i Göteborg.</p>
+        <p id="code-font" style="color: #FA2FBD;" class="slide-in from-left"> &lt;/Om mig&gt;</p>
     </div>
 
     <div id="utbildning">
-        <div id="decoration-circle2"></div>
+        <div id="decoration-circle2" class="slide-in from-right"></div>
         <h1 id="code-font" style="color: #ED0800"> &lt;Utbildning&gt;</h1>
-        <p style="font-size: larger;">Lorem, ipsum dolor sit amet consectetur <br>
-             adipisicing elit. Quae facilis provident blanditiis iste aperiam <br>
-              officia iure fugiat ex, accusantium exercitationem <br> 
-              magni sint, quis laboriosam dolor voluptatem? <br>
-               Mollitia reprehenderit esse iusto?</p>
-        <p id="code-font" style="color: #ED0800"> &lt;/Utbildning&gt;</p>
+        <img src="/Images/Östrabo-logga.png" alt="" class="slide-in from-left">
+        <p style="font-size: larger;" class="slide-in from-left">
+        Jag gick teknik på Östrabo i Uddevalla med inriktningen informations- och medieteknik. <br>
+        Meriterande ämnen: <br>
+        + Programering 1 (c#) <br>
+        + Programering 2 (c#) <br>
+        + Webbutveckling 1 (html, css och js) <br>
+        + Webbserverprogramering (html, css, js och php)</p>
+        <br>
+        <br>
+        <img src="/Images/MI-logo.png" alt="" class="slide-in from-left">
+        <p style="font-size: larger;" class="slide-in from-left">
+        Jag utbildar mig just nu till frontenddeveloper och går första året på medieinstitutet i Göteborg. <br>
+        Jag är färdigutbildad junior frontenddeveloper år 2023.</p>
+        <p id="code-font" style="color: #ED0800" class="slide-in from-left"> &lt;/Utbildning&gt;</p>
     </div>
 
     <div id="portfolio">
-        <div id="decoration-square"></div>
+        <div id="decoration-square" class="slide-in from-right"></div>
         <h1 id="code-font" style="color: #FFF67D"> &lt;Portfolio&gt;</h1>
-        <p style="font-size: larger;">Lorem, ipsum dolor sit amet consectetur <br>
-             adipisicing elit. Quae facilis provident blanditiis iste aperiam <br>
-              officia iure fugiat ex, accusantium exercitationem <br> 
-              magni sint, quis laboriosam dolor voluptatem? <br>
-               Mollitia reprehenderit esse iusto?</p>
-        <p id="code-font" style="color: #FFF67D"> &lt;/Portfolio&gt;</p>
+        <p style="font-size: larger;" class="slide-in from-left">Här har jag inget att lägga in så låtsas att jag har många bra projekt för stora företag här</p>
+        <p id="code-font" style="color: #FFF67D" class="slide-in from-left"> &lt;/Portfolio&gt;</p>
     </div>
 
-    <div id="erfarenhet">
-        <div id="decoration-square2"></div>
-        <h1 id="code-font" style="color: #00C8F0"> &lt;Erfarenhet&gt;</h1>
-        <p style="font-size: larger;">Lorem, ipsum dolor sit amet consectetur <br>
+    <div id="erfarenhet" class="slide-in fade-in">
+        <div id="decoration-square2" class="slide-in from-right"></div>
+        <h1 id="code-font" style="color: #00C8F0" class="slide-in from-left"> &lt;Erfarenhet&gt;</h1>
+        <p style="font-size: larger;" class="slide-in from-left">Lorem, ipsum dolor sit amet consectetur <br>
              adipisicing elit. Quae facilis provident blanditiis iste aperiam <br>
               officia iure fugiat ex, accusantium exercitationem <br> 
               magni sint, quis laboriosam dolor voluptatem? <br>
                Mollitia reprehenderit esse iusto?</p>
-        <p id="code-font" style="color: #00C8F0"> &lt;/Erfarenhet&gt;</p>
+        <p id="code-font" style="color: #00C8F0" class="slide-in from-left"> &lt;/Erfarenhet&gt;</p>
     </div>
 
     <div id="kontakta-mig">
-        <h1 id="code-font" style="color: #005f0d"> &lt;Kontakta mig&gt;</h1>
-        <p style="font-size: larger;">Lorem, ipsum dolor sit amet consectetur <br>
-             adipisicing elit. Quae facilis provident blanditiis iste aperiam <br>
-              officia iure fugiat ex, accusantium exercitationem <br> 
-              magni sint, quis laboriosam dolor voluptatem? <br>
-               Mollitia reprehenderit esse iusto?</p>
-        <p id="code-font" style="color: #005f0d"> &lt;/Kontakta mig&gt;</p>
+        <div id="decoration-square3" class="slide-in from-right"></div>
+        <h1 id="code-font" style="color: #005f0d" class="slide-in from-left"> &lt;Kontakta mig&gt;</h1>
+        <form id="kontakta-mig-form">
+            <div id="form">
+            <div id="för-efternamn-email">
+                <label for="förnamn">Förnamn:
+                <input type="text" placeholder="skriv ditt förnamn här..." id="förnamn">
+            </label>
+                
+                <label for="efternamn">Efternamn:
+                <input type="text" placeholder="skriv ditt efternamn här...">
+                </label>
+                
+                <label for="email">Email:
+                <input type="text" placeholder="skriv din mailadress här...">
+                </label>
+                </div>
+                <div id="meddelande">
+                <label for="meddelande">Meddelande:
+                <textarea placeholder="skriv ditt meddelande här..." id="meddelande-input" cols="50" rows="5"></textarea>
+                </label>
+                </div>
+            <div id="skicka">
+                <input type="submit" value="Skicka!" id="button">
+            </div>
+        </div>
+        <div id="submitted">
+        <h2 id="kontakt-h2" style="text-align: center;">
+            Tack för att du kontaktade mig <span id="name"></span>! Jag svarar så snart jag kan!
+        </h2>
+        </div>
+        </form>
+        <p id="code-font" style="color: #005f0d" class="slide-in from-left"> &lt;/Kontakta mig&gt;</p>
     </div>
+    
 
 </main>
 
