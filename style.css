@@ -72,16 +72,21 @@ header{
 }
 
 #om-mig, #utbildning, #portfolio, #erfarenhet, #kontakta-mig{
-    height: auto;
+    height: 70vh;
     /* background-color: blue; */
     position: relative;
     left: 15vh;
     right: 15vh;
     max-width: 100rem;
-    overflow: hidden;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     margin-bottom: 6rem;
 }
+
+#utbildning{
+    height: auto;
+}
+
+
 
 
 #decoration-circle{
@@ -299,10 +304,6 @@ header{
     right: 15vh;
 }
 
-#form{
-    height: 5rem;
-}
-
 form{
     background: #292929;
     height: 20rem;
@@ -323,9 +324,9 @@ input:focus{
     border-bottom: 2px solid white;
 }
 
-#email > input{
+/* #email > input{
     padding: 15rem;
-}
+} */
 
 #för-efternamn-email{
     /* background: red; */
@@ -373,4 +374,119 @@ input:focus{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+footer{
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 1200px){
+    #om-mig, #utbildning, #portfolio, #erfarenhet, #kontakta-mig{
+        left: 0vh;
+        max-width: 80rem;
+        overflow: hidden;
+        margin-bottom: 6rem;
+    }
+
+    #om-mig > p, #utbildning > p, #portfolio > p, #erfarenhet > p, #kontakta-mig > p{
+        margin-left: 5vh;
+    }
+
+    #om-mig > h1, #utbildning > h1, #portfolio > h1, #erfarenhet > h1, #kontakta-mig > h1{
+        margin-left: 5vh;
+    }
+
+    #utbildning > img{
+        margin-left: 5vh;
+    }
+}
+
+@media (max-width: 1024px){
+    #meddelande{
+        left: 0;
+    }
+
+    #button{
+        right:3rem;
+    }
+}
+
+@media (max-width: 768px){
+
+    #för-efternamn-email{
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 10rem;
+        height: fit-content;
+        gap: 3rem;
+    }
+
+    #förnamn{
+        margin-left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #efternamn{
+        margin-left: 49%;
+        transform: translateX(-50%);
+    }
+
+    #email{
+        margin-left: 52%;
+        transform: translateX(-50%);
+    }
+
+    #kontakta-mig{
+        height:120vh;
+    }
+    #meddelande{
+        margin-left: 2rem;
+        top: 20rem;
+    }
+    #button{
+        bottom: 3rem;
+    }
+    form{
+        min-height: 30rem;
+    }
+}
+
+@media (max-width: 480px){
+    form{
+        min-height: 40rem;
+    }
+
+    #button{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #meddelande{
+        top: 25rem;
+        margin: 0;
+    }
+
+    #MIlogo{
+        width: 20rem;
+        margin:0 !important;
+    }
+
+    #startsida-h1{
+        margin: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        min-width: 80vw;
+    }
+
+    #menu-opacity{
+        background-color: rgba(0, 0, 0, 100%);
+    }
+
+    footer{
+        background: red;
+    }
 }
