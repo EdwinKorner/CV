@@ -1,10 +1,14 @@
+/**
+ * Kallar @function addEventListeners onload
+ */
+
 window.onload = main;
 
 function main(){
     addEventListeners();
 }
 
-
+/**Två onclick events så att hamburgermenyn kan öppnas och stängas */
 function addEventListeners(){
     const menuButton = document.getElementById("hamburger-checkbox");
     menuButton.onclick = hamburgerToggle;
@@ -12,7 +16,7 @@ function addEventListeners(){
     let menuText = document.getElementById("list-text");
     menuText.onclick = hamburgerToggle;
 }
-//Hamburger-meny
+/**@function hamburgerToggle bestämmer vad som ska hända när man öppnar hamburgermenyn. Jag har gjort en animation med ikonen*/
 const menuList = document.getElementById("menu-list");
 const fadedBackground = document.getElementById("menu-opacity");
 const header = document.querySelector("header");
@@ -65,6 +69,8 @@ function hamburgerToggle(){
 const mainClick = document.querySelector("main");
 mainClick.onclick = hamburgerClose;
 
+/**@function hamburgerClose är en funktion som gör att hamburgermenyn stängs när man klickar utanför menyn så att man inte behöver klicka på krysset */
+
 function hamburgerClose(){
   menuList.style.width=null;
   fadedBackground.style.width=null;
@@ -87,7 +93,7 @@ function hamburgerClose(){
   header.style.background="#141414";
 }
 
-//Animationer onScroll
+/** Här har jag använt mig av en IntersectionObserver. Om ett objekt syns på hemsidan så dras en animation igång på objektet */
 
 const faders = document.querySelectorAll('.fade-in');
 const sliders = document.querySelectorAll('.slide-in');
@@ -120,7 +126,10 @@ const appearOptions = {
     appearOnScroll.observe(slider);
   });
 
-  //Formulär animationer
+  /**
+   * Här ändras formulär sektionen efter man klickar på knappen. Det kommer upp en text som tackar personen som skickade meddelandet.
+   * Namnet som skrevs in i förnamn rutan skrivs ut i h2 texten som kommer fram på sidan
+   */
 
   
     const submitbutton = document.getElementById("button");
@@ -134,6 +143,5 @@ const appearOptions = {
         kontaktH2.style.display="block";
         let förnamn = document.getElementById("förnamnValue").value;
         document.getElementById("name").innerHTML = förnamn;
-        // alert(förnamn);
         submitbutton.style.display="none";
     }

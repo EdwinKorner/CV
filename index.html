@@ -13,6 +13,8 @@
 </head>
 <body>
 <header>
+
+<!--Hamburgermeny ikon samt listan som är i menyn-->
 <div id="hamburger">
     <input type="checkbox" id="hamburger-checkbox">
     <label for="hamburger-checkbox">
@@ -37,8 +39,10 @@
 
 </header>
 
+<!--Menu-opacity är diven som kommer i bakgrunden när hamburgermenyn är framme. Den gör så att allt i bakgrunden blir lite mörkare så att det är lättare att fokusera på menyn-->
 <main>
     <div id="menu-opacity"></div>
+    <!--Startsida är det första du ser på sidan och intro-text är texten som finns i början där jag introducerar hemsidan-->
     <div id="startsida">
     <div id="intro-text">
     <h1 id="startsida-h1">
@@ -48,8 +52,10 @@
     </h1>
     </div>
 </div>
-
+    <!--Sektionen "om-mig"-->
     <div id="om-mig">
+        <!--Objekten som har class="slide-in from-right" eller class="slide-in from-left" kommer att tonas in och komma in i bild från höger eller vänster när de är synliga
+        Decoration-circle är den lysande cirkeln som återkommer i nästa sketion också-->
         <div id="decoration-circle" class="slide-in from-right"></div>
         <h1 id="code-font" style="color: #FA2FBD" class="slide-in from-left"> &lt;Om mig&gt;</h1>
         <p style="font-size: larger;" class="slide-in from-left">Jag heter Edwin Körner och är 19 år gammal. <br>
@@ -58,6 +64,7 @@
         <p id="code-font" style="color: #FA2FBD;" class="slide-in from-left"> &lt;/Om mig&gt;</p>
     </div>
 
+    <!--Sektionen "utbildning"-->
     <div id="utbildning">
         <div id="decoration-circle2" class="slide-in from-right"></div>
         <h1 id="code-font" style="color: #ED0800"> &lt;Utbildning&gt;</h1>
@@ -77,14 +84,14 @@
         Jag är färdigutbildad junior frontenddeveloper år 2023.</p>
         <p id="code-font" style="color: #ED0800" class="slide-in from-left"> &lt;/Utbildning&gt;</p>
     </div>
-
+    <!--Sektionen "portfolio". Decoration-square är kvadraterna som är vid sidan i sektionerna som återkommer i de kommande sektionerna också-->
     <div id="portfolio">
         <div id="decoration-square" class="slide-in from-right"></div>
         <h1 id="code-font" style="color: #FFF67D"> &lt;Portfolio&gt;</h1>
         <p style="font-size: larger;" class="slide-in from-left">Här har jag inget att lägga in så låtsas att jag har många bra projekt för stora företag här</p>
         <p id="code-font" style="color: #FFF67D" class="slide-in from-left"> &lt;/Portfolio&gt;</p>
     </div>
-
+    <!--Sektionen "erfarenhet"-->
     <div id="erfarenhet" class="slide-in fade-in">
         <div id="decoration-square2" class="slide-in from-right"></div>
         <h1 id="code-font" style="color: #00C8F0" class="slide-in from-left"> &lt;Erfarenhet&gt;</h1>
@@ -94,6 +101,7 @@
         <p id="code-font" style="color: #00C8F0" class="slide-in from-left"> &lt;/Erfarenhet&gt;</p>
     </div>
 
+    <!--Sektionen "kontakta-mig". Här finns en form där man skriver in sina uppgifter och ett meddelande och sedan klickar på en knapp för att skicka meddelandet-->
     <div id="kontakta-mig">
         <div id="decoration-square3" class="slide-in from-right"></div>
         <h1 id="code-font" style="color: #005f0d" class="slide-in from-left"> &lt;Kontakta mig&gt;</h1>
@@ -118,7 +126,7 @@
                 </label>
                 </div>
         </div>
-        
+        <!--"Submitted" kommer upp efter man har klickat på skicka-knappen-->
         <div id="submitted">
         <h2 id="kontakt-h2" style="text-align: center;">
             Tack för att du kontaktade mig <span id="name"></span>! Jag svarar så snart jag kan!

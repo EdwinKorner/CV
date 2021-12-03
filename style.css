@@ -24,8 +24,112 @@ header{
 
 
 
+/* Här är allt i början av sidan */
 
 
+#startsida{
+    height: 85vh;
+    width: 100%;
+    transition: all .5s ease-in-out;
+}
+
+#menu-opacity{
+    position: absolute;
+    height: 100%;
+    width: 0;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 50%);
+}
+
+
+#intro-text{
+    /* background-color: red; */
+    position: absolute;
+    top: 40vh;
+    left: 15vh;
+    right: 15vh;
+}
+
+/* Här är all css till hamburgermenyn */
+#menu{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 0.5rem;
+    height:2rem;
+    width:2.5rem;
+    top:1rem;
+    right: 1rem;
+    transition: all .5s ease-in-out;
+    z-index: 2000;
+}
+
+#hamburger{
+    z-index: 2000;
+}
+
+#hamburger > input{
+    display: none;
+}
+
+#hamburger > input, #hamburger > label{
+    position: absolute;
+    top:1rem;
+    right: 1rem;
+    z-index: 100;
+    padding: 2rem;
+    margin: 0;
+    cursor: pointer;
+    z-index: 2000;
+}
+/* Listan i menyn */
+#menu-list{
+    display: flex;
+    height: 90vh;
+    width:0;
+    position: absolute;
+    right:0;
+    top:5rem;
+    padding: 0;
+    overflow: hidden;
+    transition: width 500ms;
+    z-index: 2000;
+}
+
+/* Jag har använt spans för att göra hamburger ikonen */
+#menu > span{
+    background-color: whitesmoke;
+    height: 2px;
+    width: 100%;
+    z-index: 1000;
+    transition: all .5s ease-in-out;
+}
+
+#menu-list > ul{
+    list-style-type:none;
+    margin-bottom : 2rem;
+}
+
+#list-text{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 4rem;
+    line-height: 10rem;
+    padding: 3rem;
+}
+
+/* Border bottom är strecket under varje textrad i menyn */
+#border-bottom{
+    display: flex;
+    justify-content: center;
+    border-bottom: 2px solid white;
+    position: absolute;
+    left: 10%;
+    right: 10%;
+}
+
+/* Här är det som används till varje sektion på sidan. */
 
 #code-font{
     font-family: 'Inconsolata', monospace;
@@ -34,32 +138,22 @@ header{
 }
 
 
-
-#startsida{
-    /* margin-top: 5rem; */
-    height: 85vh;
-    width: 100%;
-    /* background-color: red; */
-    transition: all .5s ease-in-out;
-}
-
 #om-mig, #utbildning, #portfolio, #erfarenhet, #kontakta-mig{
     height: 70vh;
-    /* background-color: blue; */
     position: relative;
     left: 15vh;
     right: 15vh;
     max-width: 100rem;
-    /* border: 2px solid red; */
     margin-bottom: 6rem;
 }
+
 
 #utbildning{
     height: auto;
 }
 
 
-
+/* Här är formerna som syns i varje sektion. De vanliga div:arna är former med en box-shadow på och de med ::before i sig är reflektionen av div:arna */
 
 #decoration-circle{
     height: 10rem;
@@ -181,102 +275,11 @@ header{
     filter: blur(1.5rem);
 }
 
-#menu{
-    display: flex;
-    position: absolute;
-    flex-direction: column;
-    justify-content: space-evenly;
-    gap: 0.5rem;
-    height:2rem;
-    width:2.5rem;
-    top:1rem;
-    right: 1rem;
-    /* background-color: red; */
-    /* display: none; */
-    transition: all .5s ease-in-out;
-    z-index: 2000;
-}
-
-#hamburger{
-    position: sticky;
-    z-index: 2000;
-}
-
-#hamburger > input{
-    display: none;
-}
-
-#hamburger > input, #hamburger > label{
-    position: absolute;
-    top:1rem;
-    right: 1rem;
-    z-index: 100;
-    padding: 2rem;
-    margin: 0;
-    cursor: pointer;
-    z-index: 2000;
-}
-
-#menu-list{
-    display: flex;
-    /* background-color: red; */
-    height: 90vh;
-    width:0;
-    position: absolute;
-    right:0;
-    top:5rem;
-    padding: 0;
-    overflow: hidden;
-    transition: width 500ms;
-    z-index: 2000;
-}
-
-#menu > span{
-    background-color: whitesmoke;
-    height: 2px;
-    width: 100%;
-    z-index: 1000;
-    transition: all .5s ease-in-out;
-}
-
-#menu-list > ul{
-    list-style-type:none;
-    margin-bottom : 2rem;
-}
-
-#list-text{
-    text-decoration: none;
-    color: whitesmoke;
-    font-size: 4rem;
-    line-height: 10rem;
-    padding: 3rem;
-}
-
-#border-bottom{
-    display: flex;
-    justify-content: center;
-    border-bottom: 2px solid white;
-    position: absolute;
-    left: 10%;
-    right: 10%;
-}
-
-#menu-opacity{
-    position: absolute;
-    height: 100%;
-    width: 0;
-    z-index: 100;
-    background-color: rgba(0, 0, 0, 50%);
-}
 
 
-#intro-text{
-    /* background-color: red; */
-    position: absolute;
-    top: 40vh;
-    left: 15vh;
-    right: 15vh;
-}
+
+
+/* Här är allt i kontakta-mig formuläret */
 
 form{
     background: #292929;
@@ -294,16 +297,13 @@ input{
     border-bottom: 2px solid grey;
 }
 
+/* När man klickar på ett fält blir strecket under vitt istället för grått */
 input:focus{
     border-bottom: 2px solid white;
 }
 
-/* #email > input{
-    padding: 15rem;
-} */
 
 #för-efternamn-email{
-    /* background: red; */
     height: 5rem;
     display: flex;
     justify-content: space-evenly;
@@ -314,7 +314,6 @@ input:focus{
     position: absolute;
     left: 10rem;
     bottom: 0;
-    /* background: blue; */
 }
 
 #meddelande-input{
@@ -335,21 +334,22 @@ input:focus{
 #button{
     position: absolute;
     right:10rem;
-    bottom:3rem;
+    bottom:12rem;
 }
 
+/* Detta är inställningarna för texten som kommer efter man har klickat på knappen i formuläret */
 #kontakt-h2{
     display: none;
 }
 
 #submitted{
-    /* background: red;*/
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
+/* Inställningar för footern */
 footer{
     min-height: 20vh;
     display: flex;
@@ -357,9 +357,7 @@ footer{
     align-items: center;
 }
 
-#button{
-    margin-bottom: 9rem;
-}
+/* Animationerna jag använder på alla objekt på hemsidan som styrs i javascript */
 
 .fade-in {
     opacity: 0;
@@ -396,7 +394,7 @@ footer{
     opacity: 1;
   }
 
-
+/* Mediaqueries för att hemsidan ska vara responsiv */
 @media (max-width: 1200px){
     #om-mig, #utbildning, #portfolio, #erfarenhet, #kontakta-mig{
         left: 0vh;
