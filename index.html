@@ -12,11 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=M+PLUS+1+Code:wght@200&family=Source+Code+Pro:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="menu-opacity"></div>
 <header>
-
-    
-
 <div id="hamburger">
     <input type="checkbox" id="hamburger-checkbox">
     <label for="hamburger-checkbox">
@@ -42,6 +38,7 @@
 </header>
 
 <main>
+    <div id="menu-opacity"></div>
     <div id="startsida">
     <div id="intro-text">
     <h1 id="startsida-h1">
@@ -104,7 +101,7 @@
             <div id="form">
             <div id="för-efternamn-email">
                 <label for="förnamn" id="förnamn">Förnamn:
-                <input type="text" placeholder="skriv ditt förnamn här..." >
+                <input id="förnamnValue" type="text" placeholder="skriv ditt förnamn här..." >
             </label>
                 
                 <label for="efternamn" id="efternamn">Efternamn:
@@ -120,20 +117,21 @@
                 <textarea placeholder="skriv ditt meddelande här..." id="meddelande-input" cols="50" rows="5"></textarea>
                 </label>
                 </div>
-            <div id="skicka">
-                <input type="submit" value="Skicka!" id="button">
-            </div>
         </div>
+        
         <div id="submitted">
         <h2 id="kontakt-h2" style="text-align: center;">
             Tack för att du kontaktade mig <span id="name"></span>! Jag svarar så snart jag kan!
         </h2>
         </div>
         </form>
+        <div id="skicka">
+            <input type="submit" value="Skicka!" id="button">
+        </div>
         <p id="code-font" style="color: #005f0d" class="slide-in from-left"> &lt;/Kontakta mig&gt;</p>
     </div>
     
-
+    
 </main>
 
 <footer><img src="/Images/MI-logo.png" alt=""></footer>

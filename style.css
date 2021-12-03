@@ -1,3 +1,4 @@
+/* Inställningar för html och body */
 html{
     scroll-behavior: smooth;
 }
@@ -10,44 +11,17 @@ body{
     overflow-x: hidden;
 }
 
+header{
+    height: 5rem;
+}
+
+/* Variabel för width på hamburgermenyn */
+
 :root{
     --menu-list-width: 30rem;
 }
 
-.fade-in {
-    opacity: 0;
-    transition: opacity 250ms ease-in;
-  }
-  
-  .fade-in.appear {
-    opacity: 1;
-  }
 
-  .from-left {
-    transform: translateX(-50%);
-    transform: translateX(-50%);
-  }
-  
-  .from-right {
-    transform: translateX(50%);
-    transform: translateX(50%);
-  }
-  
-  .from-left,
-  .from-right {
-    transition: opacity 250ms ease-in, -webkit-transform 400ms ease-in;
-    transition: opacity 250ms ease-in, transform 400ms ease-in;
-    transition: opacity 250ms ease-in, transform 400ms ease-in,
-      transform 400ms ease-in;
-    opacity: 0;
-  }
-  
-  .from-left.appear,
-  .from-right.appear {
-    transform: translateX(0);
-    transform: translateX(0);
-    opacity: 1;
-  }
 
 
 
@@ -59,12 +33,10 @@ body{
     font-weight: 100;
 }
 
-header{
-    height: 5rem;
-}
+
 
 #startsida{
-    margin-top: 5rem;
+    /* margin-top: 5rem; */
     height: 85vh;
     width: 100%;
     /* background-color: red; */
@@ -222,6 +194,7 @@ header{
     /* background-color: red; */
     /* display: none; */
     transition: all .5s ease-in-out;
+    z-index: 2000;
 }
 
 #hamburger{
@@ -295,6 +268,7 @@ header{
     z-index: 100;
     background-color: rgba(0, 0, 0, 50%);
 }
+
 
 #intro-text{
     /* background-color: red; */
@@ -382,6 +356,46 @@ footer{
     justify-content: center;
     align-items: center;
 }
+
+#button{
+    margin-bottom: 9rem;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 250ms ease-in;
+  }
+  
+  .fade-in.appear {
+    opacity: 1;
+  }
+
+  .from-left {
+    transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+  
+  .from-right {
+    transform: translateX(50%);
+    transform: translateX(50%);
+  }
+  
+  .from-left,
+  .from-right {
+    transition: opacity 250ms ease-in, -webkit-transform 400ms ease-in;
+    transition: opacity 250ms ease-in, transform 400ms ease-in;
+    transition: opacity 250ms ease-in, transform 400ms ease-in,
+      transform 400ms ease-in;
+    opacity: 0;
+  }
+  
+  .from-left.appear,
+  .from-right.appear {
+    transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+
 
 @media (max-width: 1200px){
     #om-mig, #utbildning, #portfolio, #erfarenhet, #kontakta-mig{
