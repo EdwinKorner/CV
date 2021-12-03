@@ -13,3 +13,8 @@ Jag har använt mig av javascript och css för att animationerna på hemsidan sk
 Jag har gjort en hamburgermeny med hjälp av javascript. I hamburgermenyn finns de olika sektionerna på hemsidan som man kan klicka på för att automatiskt skrolla ned till den sektionen man vill komma till.
 
 Längst ner på sidan finns det ett "kontakta mig" formulär där man skriver in sitt namn, mail och sedan ett meddelande.
+
+# Mediaqueries
+
+Jag har valt att använda avgränsningarna: 1200px, 1024px, 768px och 480px.
+Jag har valt dessa avgränsningar eftersom att det är de vanligaste storlekarna på skärm på olika typer av enheter. Jag valde även avgränsningarna eftersom att hemsidan tappade responsivitet vid dessa tillfällen

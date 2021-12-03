@@ -459,10 +459,12 @@ footer{
         top: 20rem;
     }
     #button{
-        bottom: 3rem;
+        margin-bottom: 6rem;
+        margin-right: 50%;
+        transform: translateX(50%);
     }
     form{
-        min-height: 30rem;
+        min-height: 35rem;
     }
 }
 
@@ -474,6 +476,7 @@ footer{
     #button{
         left: 50%;
         transform: translateX(-50%);
+        bottom: 9rem;
     }
 
     #meddelande{
@@ -498,7 +501,4 @@ footer{
         background-color: rgba(0, 0, 0, 100%);
     }
 
-    footer{
-        background: red;
-    }
 }
