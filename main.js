@@ -1,14 +1,13 @@
-/**
- * Kallar @function addEventListeners onload
- */
+//Kallar addEventListeners onload
 
 window.onload = main;
 
 function main(){
     addEventListeners();
+    animations();
 }
 
-/**Två onclick events så att hamburgermenyn kan öppnas och stängas */
+//Två onclick events så att hamburgermenyn kan öppnas och stängas
 function addEventListeners(){
     const menuButton = document.getElementById("hamburger-checkbox");
     menuButton.onclick = hamburgerToggle;
@@ -16,7 +15,7 @@ function addEventListeners(){
     let menuText = document.getElementById("list-text");
     menuText.onclick = hamburgerToggle;
 }
-/**@function hamburgerToggle bestämmer vad som ska hända när man öppnar hamburgermenyn. Jag har gjort en animation med ikonen*/
+// Funktionen hamburgerToggle bestämmer vad som ska hända när man öppnar hamburgermenyn. Jag har gjort en animation med ikonen
 const menuList = document.getElementById("menu-list");
 const fadedBackground = document.getElementById("menu-opacity");
 const header = document.querySelector("header");
@@ -66,35 +65,36 @@ function hamburgerToggle(){
      
 }
 
+
+
+// Funktionen hamburgerClose är en funktion som gör att hamburgermenyn stängs när man klickar utanför menyn så att man inte behöver klicka på krysset
 const mainClick = document.querySelector("main");
 mainClick.onclick = hamburgerClose;
-
-/**@function hamburgerClose är en funktion som gör att hamburgermenyn stängs när man klickar utanför menyn så att man inte behöver klicka på krysset */
-
 function hamburgerClose(){
+  
   menuList.style.width=null;
   fadedBackground.style.width=null;
-  setTimeout(function(){line1.style.position="relative";}, 500);
-  setTimeout(function(){line1.style.top="0";}, 500);
-  setTimeout(function(){line1.style.transform="rotate(0)";}, 200);
-  line1.style.opacity="0";
-  setTimeout(function(){line1.style.opacity="1";}, 500);
-        
-  setTimeout(function(){line2.style.opacity="1";}, 500);
-  setTimeout(function(){line2.style.position="relative";}, 500);
-  setTimeout(function(){line2.style.top="0";}, 500);
+  setTimeout(function(){
+    line1.style.position="relative",
+    line1.style.top="0",
+    line1.style.opacity="1",
+    line2.style.opacity="1",
+    line2.style.position="relative",
+    line2.style.top="0",
+    line3.style.position="relative",
+    line3.style.top="0",
+    line3.style.opacity="1" ;}, 500);
+  setTimeout(function(){line1.style.transform="rotate(0)", line3.style.transform="rotate(0)";}, 200);
 
-  setTimeout(function(){line3.style.position="relative";}, 500);
-  setTimeout(function(){line3.style.top="0";}, 500);
-  setTimeout(function(){line3.style.transform="rotate(0)";}, 200);
+  line1.style.opacity="0";
   line3.style.opacity="0";
-  setTimeout(function(){line3.style.opacity="1";}, 500);
 
   header.style.background="#141414";
 }
 
-/** Här har jag använt mig av en IntersectionObserver. Om ett objekt syns på hemsidan så dras en animation igång på objektet */
+//Här har jag använt mig av en IntersectionObserver. Om ett objekt syns på hemsidan så dras en animation igång på objektet
 
+function animations(){
 const faders = document.querySelectorAll('.fade-in');
 const sliders = document.querySelectorAll('.slide-in');
 
@@ -125,11 +125,11 @@ const appearOptions = {
   sliders.forEach(slider => {
     appearOnScroll.observe(slider);
   });
+}
 
-  /**
-   * Här ändras formulär sektionen efter man klickar på knappen. Det kommer upp en text som tackar personen som skickade meddelandet.
-   * Namnet som skrevs in i förnamn rutan skrivs ut i h2 texten som kommer fram på sidan
-   */
+  /*
+    Här ändras formulär sektionen efter man klickar på knappen. Det kommer upp en text som tackar personen som skickade meddelandet.
+    Namnet som skrevs in i förnamn rutan skrivs ut i h2 texten som kommer fram på sidan*/
 
   
     const submitbutton = document.getElementById("button");

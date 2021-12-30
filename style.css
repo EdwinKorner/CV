@@ -8,7 +8,14 @@ body{
     margin: 0;
     font-family: sans-serif;
     color: whitesmoke;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
+}
+
+main{
+    margin-left: 0;
+    padding:0;
+    /* overflow-x: hidden; */
+    max-width: 100%;
 }
 
 header{
@@ -141,9 +148,9 @@ header{
 #om-mig, #utbildning, #portfolio, #erfarenhet, #kontakta-mig{
     height: 70vh;
     position: relative;
-    left: 15vh;
-    right: 15vh;
-    max-width: 100rem;
+    left:5vh;
+    right: 5vh;
+    max-width: 90%;
     margin-bottom: 6rem;
 }
 
@@ -325,6 +332,7 @@ input:focus{
     border-bottom: 2px solid grey;
     resize: none;
     font-family: sans-serif;
+    width: 100%;
 }
 
 #meddelande-input:focus{
@@ -397,7 +405,7 @@ footer{
 /* Mediaqueries för att hemsidan ska vara responsiv */
 @media (max-width: 1200px){
     #om-mig, #utbildning, #portfolio, #erfarenhet, #kontakta-mig{
-        left: 0vh;
+        left: 0;
         max-width: 80rem;
         overflow: hidden;
         margin-bottom: 6rem;
@@ -405,6 +413,7 @@ footer{
 
     #om-mig > p, #utbildning > p, #portfolio > p, #erfarenhet > p, #kontakta-mig > p{
         margin-left: 5vh;
+        max-width: 100%;
     }
 
     #om-mig > h1, #utbildning > h1, #portfolio > h1, #erfarenhet > h1, #kontakta-mig > h1{
@@ -414,19 +423,32 @@ footer{
     #utbildning > img{
         margin-left: 5vh;
     }
+
+    #button{
+        bottom: 2.250rem;
+    }
 }
 
 @media (max-width: 1024px){
     #meddelande{
-        left: 0;
+        left: 2rem;
     }
 
     #button{
         right:3rem;
+        bottom: 3rem;
     }
 }
 
 @media (max-width: 768px){
+
+    #MIlogo{
+        width: 20rem;
+    }
+
+    footer > img{
+        width: 30rem;
+    }
 
     #för-efternamn-email{
         flex-direction: column;
@@ -447,20 +469,20 @@ footer{
     }
 
     #email{
-        margin-left: 52%;
+        margin-left: 49%;
         transform: translateX(-50%);
     }
 
     #kontakta-mig{
-        height:120vh;
+        height:125vh;
     }
     #meddelande{
         margin-left: 2rem;
-        top: 20rem;
+        top: 22rem;
     }
     #button{
-        margin-bottom: 6rem;
-        margin-right: 50%;
+        bottom: 7rem;
+        right: 50%;
         transform: translateX(50%);
     }
     form{
@@ -473,15 +495,22 @@ footer{
         min-height: 40rem;
     }
 
+    #email{
+        margin-left: 49%;
+    }
+
     #button{
         left: 50%;
         transform: translateX(-50%);
-        bottom: 9rem;
+        bottom: 2rem;
+        margin-bottom: 0;
     }
 
     #meddelande{
         top: 25rem;
-        margin: 0;
+        /* margin: 0; */
+        left: 10%;
+        right: 10%;
     }
 
     #MIlogo{
@@ -499,6 +528,11 @@ footer{
 
     #menu-opacity{
         background-color: rgba(0, 0, 0, 100%);
+    }
+
+    footer > img{
+        width: 20rem;
+        margin:0;
     }
 
 }
